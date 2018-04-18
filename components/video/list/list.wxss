@@ -1,0 +1,130 @@
+.video-list {
+  padding: 0 20rpx;
+}
+.video-list video {
+  width: 100%;
+}
+.video-info {
+  padding: 24rpx 0 18rpx 0;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 24rpx;
+}
+.video-title {
+  
+}
+.video-title text {
+  width: 85%;
+  font-size: 32rpx;
+  font-weight: 600 !important;
+  display: inline-block;
+}
+.video-attribute {
+  padding: 16rpx 0;
+  font-size: 28rpx;
+  font-weight: 200;
+  color: #999;
+}
+.video-brief view {
+  font-size: 28rpx;
+  font-weight: 400;
+  line-height: 48rpx;
+}
+
+.v-i-wrapper {
+  position: relative;
+  width: 100%;
+  height: 420rpx;
+}
+.v-i-wrapper text {
+  position: absolute;
+  z-index: 1000;
+  color: #fff;
+  right: 20rpx;
+  bottom: 15rpx;
+  font-weight: 400;
+  font-size: 24rpx;
+}
+.share-box {
+  display: inline-block;
+}
+.share-box button {
+  padding: 8rpx;
+  margin: 0;
+  border: 0;
+  line-height: 0;
+  border-radius: 0;
+  padding-top: 5rpx;
+  vertical-align: middle;
+}
+.share {
+  width: 52rpx;
+  height: 39rpx;
+}
+.cover {
+  position: absolute;
+  width: 710rpx;
+  height: 420rpx;
+  border-radius: 12rpx;
+}
+
+.video-brief text {
+  word-break: break-all;
+  line-height: 48rpx;
+  color:#666;
+  -webkit-line-clamp:2;
+  display: -webkit-box;
+  font-size: 28rpx;
+}
+
+.video-brief .text-break {
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+.extends {
+  height: 50rpx;
+}
+.extends view {
+  padding: 12rpx 0;
+  font-size: 24rpx;
+  color: #999;
+}
+.nomore-bottom {
+  font-size: 26rpx;
+  color: #bbb;
+  font-weight: 200;
+  padding: 24rpx;
+  text-align: center;
+}
+.more image {
+  width: 20rpx;
+  height: 12rpx;
+  vertical-align: middle; 
+}
+.fold-up image {
+  width: 20rpx;
+  height: 12rpx;
+  vertical-align: middle; 
+}
+
+.over-elips {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+   content:".";
+   display:block;
+   height:0;
+   visibility:hidden;
+   clear:both;
+}

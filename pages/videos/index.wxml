@@ -1,0 +1,10 @@
+<view class="video-frame">
+  <share id="share" wx:if="{{showShare}}" bind:cancelShare="onCancelShare"></share>
+  <view class="search-bar">
+    <view placeholder-style="color:#666;font-size:24rpx;font-weight:200" disabled='{{true}}' bindtap="toSearch"> <image src="/static/search.png"></image> 搜 索</view>
+  </view>
+  <view class="video-list">
+    <!-- 引入视频列表组件 -->
+    <videoList id="video_list"></videoList>
+  </view>
+</view>

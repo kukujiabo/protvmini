@@ -1,0 +1,16 @@
+<view>
+  <view class="cover"></view>
+  <view class="select-list">
+    <view class="select-items">
+      <view class="item" wx:for="{{selectItems}}" wx:key="{{item.id}}" >
+        <button class="icon" open-type='{{item.openType}}'>
+          <image src="{{item.src}}"></image>
+        </button>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+    <view class="select-cancel" bindtap="cancelShare">
+      <text>取消</text>
+    </view>
+  </view>
+</view>

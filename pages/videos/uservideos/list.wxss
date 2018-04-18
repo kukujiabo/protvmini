@@ -1,0 +1,4 @@
+/* pages/videos/uservideos/list.wxss */
+.video-list {
+  padding: 20rpx;
+}

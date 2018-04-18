@@ -1,0 +1,53 @@
+/* components/video/smalllist/list.wxss */
+.video-image {
+  padding: 0 24rpx 0 0;
+
+}
+.video-image image {
+  width: 300rpx;
+  height: 175rpx;
+}
+
+.list-item {
+  padding: 20rpx 0;
+  margin: 5rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.video-info text {
+  display: inline-block;
+  width: 350rpx;
+}
+
+.title {
+  font-size: 26rpx;
+}
+
+.title text {
+  height: 100rpx;
+  font-weight: 600;
+}
+
+.fl {
+  float: left;
+}
+
+.category {
+  font-size: 22rpx;
+  font-weight: 200;
+}
+
+.clearfix::after {
+   content:".";
+   display:block;
+   height:0;
+   visibility:hidden;
+   clear:both;
+}
+.nomore-bottom {
+  font-size: 26rpx;
+  color: #bbb;
+  font-weight: 200;
+  padding: 24rpx;
+  text-align: center;
+}

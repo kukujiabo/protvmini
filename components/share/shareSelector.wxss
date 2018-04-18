@@ -1,0 +1,53 @@
+/* components/share/shareSelector.wxss */
+.cover {
+  background: #000;
+  opacity: 0.5;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.select-list {
+  padding: #fff;
+  background: #fff;
+  z-index: 10001;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.select-items {
+  padding: 20rpx;
+  background: #f0f0f0;
+}
+.select-items .item {
+  display: inline-block;
+  text-align: center;
+}
+.select-items text {
+  font-size: 24rpx;
+  font-weight: 200;
+}
+.select-items .icon {
+  padding: 16rpx;
+  background: #fff;
+  margin: 8rpx;
+  width: 90rpx;
+  height: 90rpx;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: content-box;
+  border: 0;
+}
+.select-items image {
+  width: 84rpx;
+  height: 84rpx;
+}
+.select-cancel {
+  text-align: center;
+  padding: 18rpx;
+  font-size: 36rpx;
+  font-weight: 200;
+}

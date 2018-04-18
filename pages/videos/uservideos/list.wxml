@@ -1,0 +1,5 @@
+<view class="video-list">
+
+  <smallList id="small_list"></smallList>
+
+</view>

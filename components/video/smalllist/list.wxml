@@ -1,0 +1,18 @@
+<view>
+  <view class="list-item clearfix" wx:for="{{videos}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap='toDetail'>
+    <view class="fl video-image">
+      <image src="{{item.cover}}"></image>
+    </view>
+    <view class="fl video-info">
+      <view class="title">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="category">
+        <text>#{{item.category_name}} / {{item.showTime}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="nomore-bottom" wx:if="{{nomore}}">
+  <text> --没有更多视频了！-- </text>
+</view>

@@ -1,0 +1,28 @@
+<view class="search-frame">
+  <view class="search-bar">
+    <image src="/static/search.png"></image>
+    <input placeholder="搜 索" placeholder-style="color:#666;font-size:24rpx;font-weight:200" confirm-type="search" bindfocus='showSearchHistory' bindconfirm='doSearch' focus='true'></input>
+    <view bindtap="cancelSearch">取消</view>
+  </view>
+  <view class="search-list" hidden="{{searching}}">
+    <scroll-view class="search-item" scroll-y>
+      <view wx:for="{{searchHistory}}" wx:key="{{index}}" data-keyword="{{item}}" bindtap="searchKeywords">{{item}}</view>
+    </scroll-view>
+    <view class="clear-history" bindtap='clearHistory'>
+      <text wx:if="{{searchHistory.length > 0}}">清除搜索历史</text>
+      <text wx:else>暂无搜索历史</text>
+    </view>
+  </view>
+  <view class="video-list" hidden="{{!searching}}">
+    <!-- 引入视频列表组件 -->
+    <videoList id="video_list"></videoList>
+    <view class="no-result" wx:if="{{noResult}}">
+      <view>
+        <image src="/static/no-result.png"></image>
+      </view>
+      <view>
+        <text>没有查询到相关视频～</text>
+      </view>
+    </view>
+  </view>
+</view>

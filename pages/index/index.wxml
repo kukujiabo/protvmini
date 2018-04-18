@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="section tc">
+    <video 
+      id="myVideo" 
+      src="http://p4zsxtp7z.bkt.clouddn.com/lmHxeqnZivTCDO0qL1SNAMH6HVel"   
+      enable-danmu danmu-btn controls>
+    </video>
+    <view class="btn-area">
+      <input bindblur="bindInputBlur"/>
+    </view>
+  </view>
+</view>

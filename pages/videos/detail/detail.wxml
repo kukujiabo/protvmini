@@ -1,0 +1,43 @@
+  <view class="detail-frame">
+  <share id="share" wx:if="{{showShare}}" bind:cancelShare="onCancelShare">
+  </share>
+  <video
+    id="video-player"
+    controls
+    src="{{video.url}}"
+    autoplay
+    >
+  </video>
+  <view class="info-frame">
+    <view class="title">
+      <text class="over-elips">{{video.title}}</text>
+    </view>
+    <view class="attribute clearfix">
+      <view class="fl">
+        <text>#{{video.category_name}}／{{video.duration}}</text>
+      </view>
+      <view class="fr">
+        <view class="btn-box">
+          <image wx:if="{{video.favorite}}" src="/static/heart-full.png" class="heart" bindtap="cancelFavorite"></image>
+          <image wx:else src="/static/heart-empty.png" class="heart" bindtap="favoriteVideo"></image>
+        </view>
+        <view class="btn-box">
+          <image wx:if="{{video.collect}}" src="/static/favorite-full.png" class="favorite" bindtap="uncollectVideo"></image>
+          <image wx:else src="/static/favorite-empty.png" class="favorite" bindtap="collectVideo"></image>
+        </view>
+        <view class="btn-box">
+          <button plain='true' open-type='share'>
+            <image src="/static/share.png" class="share"></image>
+          </button>
+        </view>
+      </view>
+    </view>
+    <view class="introduction">
+      <text>{{video.brief}}</text>
+    </view>
+  </view>
+  <view class="video-list">
+    <!-- 引入视频列表组件 -->
+    <smallList id="small_list"></smallList>
+  </view>
+</view>

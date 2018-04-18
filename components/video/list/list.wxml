@@ -1,0 +1,36 @@
+<share id="share" wx:if="{{showShare}}" bind:cancelShare="onCancelShare">
+</share>
+<view class="video-item" wx:for="{{listVideo}}" wx:key="{{item.id}}">
+  <view class="v-i-wrapper">
+    <image src="{{item.cover}}" class="cover" data-index="{{index}}" bindtap="toDetail"></image>
+    <text>{{item.duration}}</text>
+  </view>
+  <view class="video-info">
+    <view class="video-title" data-index="{{index}}" bindtap="toDetail">
+      <text class="over-elips">{{item.title}}</text>
+    </view>
+    <view class="video-attribute clearfix" data-index="{{index}}" bindtap="toDetail">
+      <text class="fl">#{{item.category_name}}</text>
+      <view class="share-box fr">
+          <button plain='true' catchtap='shareVideo' open-type='share' data-id="{{item.id}}" data-title="{{item.title}}" data-image="{{item.cover}}">
+            <image src="/static/share.png" class="share"></image>
+          </button>
+      </view>
+    </view>
+    <view class="video-brief" data-index="{{index}}" bindtap="toDetail">
+      <view wx:if="{{matchWords}}">
+        <text class="text-break" wx:if="{{breakWords[index]}}">{{item.brief}}</text>
+        <text wx:else>{{item.brief}}</text>
+      </view>
+      <text class="rows" wx:else>{{item.brief}}</text>
+    </view>
+    <view class="extends" wx:if="{{extendBtns[index]}}">
+      <text style="float:left"></text>
+      <view class="more" style="float:right" bindtap="extendWord" data-index="{{index}}" wx:if="{{item.brief.length > 0 && breakWords[index] }}"> <image src="/static/arraw-down.png"></image> 展开</view>
+      <view class="fold-up" style="float:right" bindtap="breakWord" data-index="{{index}}" wx:else="{{item.brief.length > 0 && !breakWords[index] }}"> <image src="/static/fold_up.png"></image> 收起</view>
+    </view>
+  </view>
+</view>
+<view class="nomore-bottom" wx:if="{{nomore}}">
+  <text> --没有更多视频了！-- </text>
+</view>
